@@ -340,3 +340,288 @@ programa {
   }
 }
 ```
+## 2.21.
+```
+programa {
+  funcao inicio() {
+    para (inteiro i = 1; i <= 50; i++) {
+			escreva("Sensor ID: ", i, "\n")}
+  }
+}
+```
+## 2.22.
+```
+programa {
+  funcao inicio() {
+    para (inteiro i = 2; i <= 100; i += 2) {
+			escreva("Testando sensor: ", i, "\n")
+		}
+  }
+}
+```
+## 2.23.
+```
+programa {
+  funcao inicio() {
+    para (inteiro i = 10; i >= 0; i--) {
+			escreva(i, "... ")
+		}
+		escreva("IGNIÇÃO!")
+  }
+}
+```
+## 2.24.
+```
+programa {
+  funcao inicio() {
+    inteiro soma = 0, prod
+		para (inteiro i = 1; i <= 7; i++) {
+			escreva("Produção dia ", i, ": ")
+			leia(prod)
+			soma += prod
+		}
+		escreva("Total produzido na semana: ", soma)
+  }
+}
+```
+## 2.25.
+```
+programa {
+  funcao inicio() {
+    inteiro n, fat = 1
+		escreva("Calcular fatorial de: ")
+		leia(n)
+		para (inteiro i = 1; i <= n; i++) {
+			fat *= i
+		}
+		escreva("Fatorial: ", fat)
+  }
+}
+```
+## 2.26. 
+```
+programa {
+  funcao inicio() {
+    inteiro prodHora
+		escreva("Produção por hora: ")
+		leia(prodHora)
+		para (inteiro i = 1; i <= 10; i++) {
+			escreva(i, "h: ", i * prodHora, " peças\n")
+		}
+  }
+}
+```
+## 2.27. 
+```
+programa {
+  funcao inicio() {
+    real temp, soma = 0.0
+		para (inteiro i = 1; i <= 10; i++) {
+			escreva("Temperatura ponto ", i, ": ")
+			leia(temp)
+			soma += temp
+		}
+		escreva("Média térmica do ambiente: ", soma / 10)
+  }
+}
+```
+## 2.28.
+```
+programa {
+	funcao inicio() {
+		cadeia senha = ""
+		enquanto (senha != "1234") {
+			escreva("Digite a senha da porta: ")
+			leia(senha)
+			se (senha != "1234") escreva("Incorreta! ")
+		}
+		escreva("Acesso Liberado!")
+	}
+}
+```
+## 2.29
+```
+programa {
+	funcao inicio() {
+		para (inteiro i = 0; i <= 200; i += 5) {
+			escreva("Marca: ", i, "mm\n")
+		}
+	}
+}
+```
+## 2.30.
+```
+programa {
+	funcao inicio() {
+		inteiro a = 0, b = 1, prox
+		escreva(a, " ", b, " ")
+		para (inteiro i = 3; i <= 10; i++) {
+			prox = a + b
+			escreva(prox, " ")
+			a = b
+			b = prox
+		}
+	}
+}
+```
+## 2.31.
+```
+programa {
+	funcao inicio() {
+		inteiro n
+		real prod, soma = 0.0
+		escreva("Quantas máquinas analisar? ")
+		leia(n)
+		para (inteiro i = 1; i <= n; i++) {
+			escreva("Produção máquina ", i, ": ")
+			leia(prod)
+			soma += prod
+		}
+		escreva("Média final: ", soma / n)
+	}
+}
+```
+## 2.32.
+```
+programa {
+	funcao inicio() {
+		inteiro descarte = 0, aprovado = 0
+		real peso
+		para (inteiro i = 1; i <= 10; i++) {
+			escreva("Peso da peça ", i, "(g): ")
+			leia(peso)
+			se (peso < 50) { descarte++ } senao { aprovado++ }
+		}
+		escreva("Aprovadas: ", aprovado, " | Descarte: ", descarte)
+	}
+}
+```
+## 2.33.
+```
+programa {
+	funcao inicio() {
+		cadeia nome
+		real bruto, liquido
+		para (inteiro i = 1; i <= 5; i++) {
+			escreva("Nome: ") leia(nome)
+			escreva("Salário Bruto: ") leia(bruto)
+			liquido = bruto * 0.89 
+			escreva("Funcionário: ", nome, " | Líquido: R$ ", liquido, "\n")
+		}
+	}
+}
+```
+## 2.34.
+```
+programa {
+	funcao inicio() {
+		real pressao = -1.0, maior = 0.0
+		enquanto (pressao != 0) {
+			escreva("Digite a pressão (ou 0 p/ sair): ")
+			leia(pressao)
+			se (pressao > maior) { maior = pressao }
+		}
+		escreva("Maior pressão registrada: ", maior)
+	}
+}
+```
+## 2.35.
+```
+programa {
+	funcao inicio() {
+		inteiro opcao = -1
+		enquanto (opcao != 0) {
+			escreva("\n(1) Ligar (2) Desligar (3) Status (0) Sair: ")
+			leia(opcao)
+			escolha(opcao) {
+				caso 1: escreva("Máquina Ligada") pare
+				caso 2: escreva("Máquina Desligada") pare
+				caso 3: escreva("Sistema Operacional") pare
+				caso 0: escreva("Saindo...") pare
+				caso contrario: escreva("Opção Inválida")
+			}
+		}
+	}
+}
+```
+## 2.36.
+```
+programa {
+	funcao inicio() {
+		inteiro meta, prod, bateram = 0
+		escreva("Meta do dia: ") leia(meta)
+		para (inteiro i = 1; i <= 5; i++) {
+			escreva("Produção funcionário ", i, ": ") leia(prod)
+			se (prod >= meta) { bateram++ }
+		}
+		escreva(bateram, " funcionários bateram a meta.")
+	}
+}
+```
+## 2.37
+```
+programa {
+	funcao inicio() {
+		real estoque = 1000.0, retirada
+		enquanto (estoque > 0) {
+			escreva("Saldo: ", estoque, "kg. Quanto retirar? ")
+			leia(retirada)
+			estoque -= retirada
+			se (estoque < 0) estoque = 0.0
+		}
+		escreva("Silo vazio.")
+	}
+}
+```
+## 2.38.
+```
+programa {
+	funcao inicio() {
+		inteiro nota, notaDez = 0
+		para (inteiro i = 1; i <= 10; i++) {
+			escreva("Voto funcionário ", i, " (0-10): ")
+			leia(nota)
+			se (nota == 10) { notaDez++ }
+		}
+		escreva("Funcionários que deram nota máxima: ", notaDez)
+	}
+}
+```
+## 2.39.
+```
+programa {
+	funcao inicio() {
+		real pol
+		para (inteiro i = 1; i <= 5; i++) {
+			escreva("Medida em polegadas: ")
+			leia(pol)
+			escreva(pol, " pol = ", pol * 2.54, " cm\n")
+		}
+	}
+}
+```
+## 2.40.
+```
+programa {
+	funcao inicio() {
+		cadeia nome, destaque = "", setor
+		inteiro prod, total = 0, maiorProd = 0
+		para (inteiro i = 1; i <= 5; i++) {
+			escreva("Nome: ") leia(nome)
+			escreva("Setor (A/B/C): ") leia(setor)
+			escreva("Produção: ") leia(prod)
+			total += prod
+			se (prod > maiorProd) {
+				maiorProd = prod
+				destaque = nome
+			}
+		}
+		escreva("\n--- DASHBOARD ---")
+		escreva("\nTotal Fábrica: ", total)
+		escreva("\nMédia: ", total / 5.0)
+		escreva("\nDestaque: ", destaque)
+	}
+}
+```
+
+
