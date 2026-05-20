@@ -48,8 +48,4 @@ Sem o "senao", o sistema poderia saber quando ligar, mas não saberia o que faze
 Por que comentar? Para explicar o "porquê" de certas decisões técnicas complexas. Isso economiza horas de investigação em caso de falha no sistema e garante que a operação da fábrica não pare por falta de entendimento do software.
 
 
-	}
-}
-```
-
 
